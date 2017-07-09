@@ -7,7 +7,8 @@ from __future__ import print_function
 import argparse
 import sys
 
-from interfaz_biometrico_nominai_mi import metadata
+import metadata
+import etl_novedades_nomina
 
 
 def main(argv):
@@ -24,7 +25,6 @@ def main(argv):
 {project} {version}
 
 {authors}
-URL: <{url}>
 '''.format(
         project=metadata.project,
         version=metadata.version,
@@ -54,4 +54,5 @@ def entry_point():
 
 
 if __name__ == '__main__':
-    entry_point()
+#    entry_point()
+    etl_novedades_nomina.main()
